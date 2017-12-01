@@ -21,6 +21,14 @@ ERC20 tokens provides rights to own and transfer value by its holders. However m
 
 Standardized access to past token snapshots allows any contract, d-app and external party to implement such rights while keeping token contract itself simple and ERC20 compatible.
 
+### Example Applications
+ERC20 enables services that handle transfer of ownership rights: centralized and decentralized exchanges. Similarly, proposed extension enables new types of services that handle various earned rights - as enumerated above. Various services of this kind are actually being developed:
+* A project that builds a network of organizations where tokens give rights to vote and may bring revenues according to a set of organization bylaws. They may be also exchanged between organizations as a means of payment.
+* A protocol to create funds that invest in various asset universes including tokens that bring proceeds and allow to vote. With proposed extension such tokens may be properly handled ie. proceeds may be distributed to fund members.
+* A platform for fundraising via ICOs where tokens represent equity (that is shareholder rights) or bonds issues new tokens that it wants to exchange with projects like those above.
+
+Centralized exchanges technically own tokens they trade. Proposed extension gives technical possibility for such exchange to at least pay out proceeds from the tokens to true owners.
+
 ## Specification
 
 ### Snapshotting progression
@@ -77,7 +85,7 @@ This proposal deliberately does not define any particular snapshotting progressi
 
 ## References and Prior Art
 * [MiniMe](https://github.com/Giveth/minime) provides `totalSupplyAt` and `balanceOfAt` implementation for snapshot progression from block timestamps
-* [Neumark](https://github.com/Neufund/ico-contracts/tree/master/contracts/SnapshotToken) implements this proposal, also provides snapshot query/retrieval mechanism as a mixin contract
+* [Neumark](https://github.com/Neufund/ico-contracts/tree/master/contracts/SnapshotToken) implements this proposal, also provides standalone snapshot query/retrieval contract and a few snapshotting progression implementations.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
